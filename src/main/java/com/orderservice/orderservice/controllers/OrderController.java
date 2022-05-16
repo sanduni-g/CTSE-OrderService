@@ -41,4 +41,9 @@ public class OrderController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/getOrders")
+    public String getAll(){
+        return "Order Details";
+    }
 }
