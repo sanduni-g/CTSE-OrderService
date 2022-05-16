@@ -69,5 +69,5 @@ jobs:
     # Get the GKE credentials so we can deploy to the cluster
     - run: gcloud container clusters get-credentials ${{ env.GKE_CLUSTER }} --zone ${{ env.GKE_ZONE }}
 
-    - name: Deploy
+    - name: Run Deploy
       run: kubectl apply -f orderservice.yaml
