@@ -46,7 +46,11 @@ jobs:
 
     - name: Pushing Docker Image to Docker Hub
       run: docker push it19146102/orderservices
-
+      
+  Deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
     - id: "auth"
       uses: google-github-actions/auth@v0
       with:
