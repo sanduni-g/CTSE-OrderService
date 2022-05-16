@@ -11,7 +11,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
-  GKE_CLUSTER: orderservice
+  GKE_CLUSTER: orderservices
   GKE_ZONE: us-central1-c
 
 
