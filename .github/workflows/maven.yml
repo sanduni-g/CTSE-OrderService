@@ -47,10 +47,6 @@ jobs:
     - name: Pushing Docker Image to Docker Hub
       run: docker push it19146102/orderservices
       
-  Deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
     - id: "auth"
       uses: google-github-actions/auth@v0
       with:
@@ -69,5 +65,5 @@ jobs:
     # Get the GKE credentials so we can deploy to the cluster
     - run: gcloud container clusters get-credentials ${{ env.GKE_CLUSTER }} --zone ${{ env.GKE_ZONE }}
 
-    - name: Run Deploy
+    - name: Deploy
       run: kubectl apply -f orderservice.yaml
