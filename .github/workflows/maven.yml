@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 env:
-  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+  PROJECT_ID: ${{ secrets.PROJECT_ID }}
   GKE_CLUSTER: orderservice
   GKE_ZONE: us-central1-c
 
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: kubectl - Google Cloud GKE cluster.
+    - name: kubectl - Google Cloud GKE cluster
       uses: ameydev/gke-kubectl-action@master
       env:
         PROJECT_ID: ${{ env.PROJECT_ID }}
