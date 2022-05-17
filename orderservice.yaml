@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: docker-k8s-orderservice
-          image: it19146102/orderservice
+          image: it19146102/orderservice:1.0
           ports:
           - containerPort: 8280
