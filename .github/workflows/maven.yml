@@ -63,7 +63,6 @@ jobs:
       run: gcloud info
 
     # Get the GKE credentials so we can deploy to the cluster
-    - name: Get Credentials
     - run: gcloud container clusters get-credentials ${{ env.GKE_CLUSTER }} --zone ${{ env.GKE_ZONE }}
 
     - name: Deploy
