@@ -38,10 +38,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker Image
-      run: docker build . --file Dockerfile --tag it19146102/orderservices:1.0
+      run: docker build . --file Dockerfile --tag it19146102/orderservices:1.1
 
     - name: Pushing Docker Image to Docker Hub
-      run: docker push it19146102/orderservices:1.0
+      run: docker push it19146102/orderservices:1.1
       
     - id: "auth"
       uses: google-github-actions/auth@v0

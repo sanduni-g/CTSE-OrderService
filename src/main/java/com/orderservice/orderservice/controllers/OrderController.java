@@ -46,4 +46,10 @@ public class OrderController {
     public String getAll(){
         return "Order Details";
     }
+
+    @GetMapping("/getTest")
+    public String getTest(){
+        return "Order Test";
+    }
+
 }
